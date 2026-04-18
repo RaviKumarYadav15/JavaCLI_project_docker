@@ -1,16 +1,22 @@
-version: '3.8'
 services:
   mysql-container:
     image: mysql:8.4
     container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: librarydb
+      MYSQL_USER: libraryuser
+      MYSQL_PASSWORD: librarypass
     volumes:
       - mysql-data:/var/lib/mysql
+
   java-container:
     build: .
     container_name: java-container
-    stdin_open: true
-    tty: true
+    stdin_open: true 
+    tty: true        
     depends_on:
       - mysql-container
+
 volumes:
   mysql-data:
