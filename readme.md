@@ -48,7 +48,7 @@ SELECT * FROM books;
 Type exit to leave the MySQL terminal.
 
 
-🛑 How to Stop the Environment
+### 🛑 How to Stop the Environment
 When you are completely finished testing the project, 
 you can safely shut down both the Java and MySQL containers by running:
 
